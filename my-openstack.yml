@@ -5,11 +5,11 @@
   hosts: 127.0.0.1
   roles:
     - prepare
-    # - mariadb
-    # - keystone
-    # - glance
-    # - nova
-    # - cinder
-    # - neutron
-    # - dashboard
+    - mariadb
+    - keystone
+    - glance
+    - nova
+    - cinder
+    - neutron
+    - dashboard
 
