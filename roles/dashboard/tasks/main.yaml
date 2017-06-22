@@ -1,0 +1,7 @@
+- include: copy.yml
+- name: install dashboard
+  remote_user: root
+  register: result
+  shell: /bin/bash {{ paths }}/install_dashboard.sh
+- name: dashboard log
+  debug: var=result.stdoutline verbosity=0

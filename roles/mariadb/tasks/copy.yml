@@ -1,0 +1,4 @@
+- name: copy scripts and folder
+  copy: src={{ item }} dest={{ paths }}
+  with_items:
+    - install_mariadb.sh

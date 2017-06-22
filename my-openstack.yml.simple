@@ -1,0 +1,4 @@
+# remote_user user:远程用户,本地用户神马的
+# gather_facts = false 选择不与目标机交互
+# 这里有8个任务,执行外部脚本
+# 目标机 可以<ip>或<hostname>

@@ -1,0 +1,4 @@
+- include: copy.yml
+- name: install cinder
+  remote_user: root
+  shell: /bin/bash {{ paths }}/install_cinder.sh

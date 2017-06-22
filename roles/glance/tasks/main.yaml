@@ -1,0 +1,7 @@
+- include: copy.yml
+- name: install glance
+  remote_user: root
+  # register: result
+  shell: /bin/bash {{ paths }}/install_glance.sh
+# - name: glance log
+#   debug: var=result.stdoutline verbosity=0

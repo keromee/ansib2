@@ -1,0 +1,25 @@
+---
+- name: check-user
+  shell: echo $USER
+  register: name
+- fail: msg="please use ROOT privilege!"
+  when: name.stdout != 'root'
+  
+- name: check-dir
+  shell: echo $HOME
+  register: dir
+- fail: msg="you must play it in  /root  !"
+  when: dir.stdout | search("(.*?)/root")  != true
+
+# - name: ensure libs
+#   shell: yum list installed |grep libselinux-python
+#   register: result
+# - name: install libs
+#   yum: name={{ item }} state=latest
+#   register: result2
+#   with_items:
+#     - libselinux-python
+#   when: result.stdout.find('libselinux') == -1
+# - name: install log 
+#   debug: var=result2.stdoutline verbosity=0
+

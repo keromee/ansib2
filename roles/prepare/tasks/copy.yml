@@ -1,0 +1,7 @@
+---
+- name: copy scripts and folder
+  copy: src={{ item }} dest={{ paths }}
+  with_items:
+    - lib
+    - presystem.sh
+    - CentOS-7.3.1611-repo.tar.gz
