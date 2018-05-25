@@ -188,7 +188,7 @@ fn_log "yum clean all && yum update -y "
 
 echo `date "+%Y-%m-%d %H:%M:%S"` >/etc/openstack-newton_tag/presystem.tag
 echo -e "\033[32m ##################################### \033[0m"
-echo -e "\033[32m ##   Configure System Sucessed. ##### \033[0m"
+echo -e "\033[32m ##   Configure System Sucessed！！. ##### \033[0m"
 echo -e "\033[32m ##################################### \033[0m"
 
 echo -e "\033[41;37m begin to reboot system to enforce kernel \033[0m"
