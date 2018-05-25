@@ -1,0 +1,4 @@
+- include: copy.yml
+- name: install neutron
+  remote_user: root
+  shell: /bin/bash {{ paths }}/install_neutron_two.sh

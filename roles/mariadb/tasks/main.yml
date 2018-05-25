@@ -1,0 +1,7 @@
+- include: copy.yml
+- name: install mariadb
+  remote_user: root
+  register: result
+  shell: /bin/bash install_mariadb.sh chdir={{ paths }}
+# - name: mariadb log
+#   debug: var=result.stdoutline verbosity=0

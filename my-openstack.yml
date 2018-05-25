@@ -1,0 +1,15 @@
+---
+- name: install openstack controller(all-in-one)
+  remote_user: root
+  gather_facts: false
+  hosts: 127.0.0.1
+  roles:
+    - prepare
+    - mariadb
+    - keystone
+    - glance
+    - nova
+    - cinder
+    - neutron
+    - dashboard
+

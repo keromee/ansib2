@@ -1,0 +1,7 @@
+- include: copy.yml
+- name: install nova
+  remote_user: root
+  register: result
+  shell: /bin/bash {{ paths }}/install_nova.sh
+# - name: nova log
+#   debug: var=result.stdoutline verbosity=0

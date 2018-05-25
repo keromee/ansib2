@@ -1,0 +1,14 @@
+---
+- include: common.yml
+- include: copy.yml
+# - name: unzip repo
+#   remote_user: root
+#   shell: tar -zxvf CentOS-7.3.1611-repo.tar.gz chdir="{{ repoDir }}"
+- unarchive: src=CentOS-7.3.1611-repo.tar.gz dest={{ repoDir }} list_files=yes
+- name: install system
+  remote_user: root
+  shell: /bin/bash presystem.sh chdir="{{ paths }}"
+  # register: result
+# - name: show log 
+#   debug: var=result.stdoutline verbosity=0
+- include: delete.yml

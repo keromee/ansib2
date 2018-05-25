@@ -1,0 +1,11 @@
+---
+- name: delete system
+  remote_user: root
+  shell: rm -rf {{ item }} chdir={{ paths }}
+  with_items:
+    - presystem.sh
+    - CentOS-7.3.1611-repo.tar.gz
+
+  # register: result
+# - name: show log 
+#   debug: var=result.stdoutline verbosity=0

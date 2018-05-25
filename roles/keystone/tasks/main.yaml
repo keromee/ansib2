@@ -1,0 +1,7 @@
+- include: copy.yml
+- name: config keystone
+  remote_user: root
+  register: result
+  shell: /bin/bash {{ paths }}/config-keystone.sh
+# - name: keystone log
+#   debug: var=result.stdoutline verbosity=0
