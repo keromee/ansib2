@@ -5,7 +5,8 @@
 	templates 模版存放路径
 	handlers notify调用部分playbook存放路径
 	vars roles内变量存放路径
-文件夹生成
+
+文件夹生成 快速安装
 mkdir -p xx/ansible/roles/{nginx,mysql,tomcat,db}/{defaults,files,handlers,meta,tasks,templates,vars}
 
 安装前请先确认
